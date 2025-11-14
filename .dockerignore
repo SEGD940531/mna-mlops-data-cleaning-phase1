@@ -1,0 +1,78 @@
+
+# ==========================================
+# Directorios de entorno y dependencias
+# ==========================================
+venv/
+.env/
+.venv/
+__pycache__/
+*.pyc
+
+# ==========================================
+# Archivos y carpetas de Git
+# ==========================================
+.git/
+.gitignore
+
+# ==========================================
+# Logs, cache, y salidas temporales
+# ==========================================
+*.log
+logs/
+cache/
+.tmp/
+.temp/
+
+# ==========================================
+# DVC
+# ==========================================
+# MUY IMPORTANTE:
+# NO ignorar .dvc/ → contiene el estado del repo DVC
+!.dvc/
+!.dvc/**
+
+# Bloquea solo archivos grandes gestionados por DVC
+data/**
+models/**
+
+# Permite directorios y archivos de control
+!data/
+!models/
+!data/*.dvc
+!models/*.dvc
+!data/.gitignore
+!models/.gitignore
+!data/.gitkeep
+!models/.gitkeep
+
+# ==========================================
+# Notebooks (opcional)
+# (si quieres incluirlos, comenta estas líneas)
+# notebooks/
+# *.ipynb_checkpoints/
+
+# ==========================================
+# Archivos de editor
+# ==========================================
+.vscode/
+.idea/
+*.swp
+
+# ==========================================
+# Archivos de sistema
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Reportes generados
+# (NO ignorarlos si se necesitan para entrenamientos o pipeline)
+# Si quieres ignorarlos:
+# reports/
+
+# ==========================================
+# Documentación (opcional)
+# Comentado porque sí lo estás copiando en tu Dockerfile
+# docs/
+
+

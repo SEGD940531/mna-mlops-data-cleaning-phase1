@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/carlosalvarez/Documents/MNA_TEC_MONTERREY/TC5044_Operaciones de Aprendizaje Automatico/PROYECTO/mna-mlops-data-cleaning-phase1/venv/bin/python" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

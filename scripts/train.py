@@ -39,16 +39,16 @@ def main():
         X_test, y_test = pickle.load(f)
 
     # --- 2️⃣ Entrenar el modelo ---
-    mlflow.set_tracking_uri("http://34.209.6.113:80")
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
-    mlflow.set_experiment("/equipo30-xgboost")
+    mlflow.set_experiment("/equipo30-xgboost-docker")
     with mlflow.start_run():
         params = {
-            "n_estimators": 145,
+            "n_estimators": 100,
             "learning_rate": 0.05,
             "max_depth": 3,
             "subsample": 0.9,
-            "colsample_bytree": 0.9,
+            "colsample_bytree": 0.8,
             "random_state": 42,
         }
         mlflow.log_params(params)

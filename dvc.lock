@@ -36,26 +36,26 @@ stages:
     outs:
     - path: data/features
       hash: md5
-      md5: d7c5d2c9262b308f57ca8afe245bae62.dir
-      size: 48355
+      md5: 4f00ee4ec4ad32cd7dc1de5549aa12e3.dir
+      size: 48329
       nfiles: 3
   train:
     cmd: python scripts/train.py data/features models
     deps:
     - path: data/features
       hash: md5
-      md5: ab896340d60ff6d7e1ba3c09ac5583a4.dir
-      size: 39957
-      nfiles: 2
+      md5: 4f00ee4ec4ad32cd7dc1de5549aa12e3.dir
+      size: 48329
+      nfiles: 3
     - path: scripts/train.py
       hash: md5
-      md5: c2cdfb7999f14dfd3a887471f6cc2384
-      size: 2475
+      md5: 57aeef5597dff7be85152d135f20c11a
+      size: 2481
     params:
       params.yaml:
         train.seed: 20170428
     outs:
     - path: models/linear_model.pkl
       hash: md5
-      md5: 6ded83e4219a1c4a6105a360b025f56a
-      size: 162645
+      md5: 8657505d4ef572e959180ef051664dbf
+      size: 111593
